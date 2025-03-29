@@ -57,6 +57,5 @@ int main() {
 
     // Вивід значень та обчисленого S (8.2.3)
     printValuesAndResult(x, y, z);
-
     return 0;
 }
