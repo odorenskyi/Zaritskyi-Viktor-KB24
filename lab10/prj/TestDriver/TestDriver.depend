@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1744179355 source:/home/mikroffarad/Zaritskyi-Viktor-KB24/lab10/prj/TestDriver/main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<ctime>
+	<vector>
+	<algorithm>
+	<cctype>
+	"ModulesZaritskyi.h"
+
+1744147220 /home/mikroffarad/Zaritskyi-Viktor-KB24/lab08/prj/ModulesZaritskyi.h
+

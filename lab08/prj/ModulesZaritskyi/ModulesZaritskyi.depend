@@ -4,3 +4,16 @@
 1741800628 source:c:\mikroffarad\development\zaritskyi-viktor-kb24\lab08\prj\moduleszaritskyi\main.cpp
 	<cmath>
 
+1744179430 source:/home/mikroffarad/Zaritskyi-Viktor-KB24/lab08/prj/ModulesZaritskyi/main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<ctime>
+	<algorithm>
+	<cctype>
+	<cmath>
+	"ModulesZaritskyi.h"
+
+1744179865 /home/mikroffarad/Zaritskyi-Viktor-KB24/lab08/prj/ModulesZaritskyi.h
+
