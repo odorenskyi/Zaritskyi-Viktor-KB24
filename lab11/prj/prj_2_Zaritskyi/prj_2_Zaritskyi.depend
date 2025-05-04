@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1746391325 source:c:\users\mikroffarad\mikroffarad\development\zaritskyi-viktor-kb24\lab11\prj\prj_2_zaritskyi\main.cpp
+	<iostream>
+	<string>
+	<limits>
+	"struct_type_project_2.h"
+	"Module_File_Zaritskyi.h"
+	"Module_CRUD_Kondratenko.h"
+	"Module_SearchDel_Kolesnyk.h"
+
+1746390983 c:\users\mikroffarad\mikroffarad\development\zaritskyi-viktor-kb24\lab11\prj\struct_type_project_2.h
+	<string>
+
+1746388919 c:\users\mikroffarad\mikroffarad\development\zaritskyi-viktor-kb24\lab11\prj\module_file_zaritskyi\module_file_zaritskyi.h
+	"struct_type_project_2.h"
+	<string>
+	<fstream>
+	<iostream>
+
+1746390911 c:\users\mikroffarad\mikroffarad\development\zaritskyi-viktor-kb24\lab11\prj\module_crud_kondratenko\module_crud_kondratenko.h
+	"struct_type_project_2.h"
+	<string>
+
+1746390905 c:\users\mikroffarad\mikroffarad\development\zaritskyi-viktor-kb24\lab11\prj\module_searchdel_kolesnyk\module_searchdel_kolesnyk.h
+	<string>
+	"struct_type_project_2.h"
+

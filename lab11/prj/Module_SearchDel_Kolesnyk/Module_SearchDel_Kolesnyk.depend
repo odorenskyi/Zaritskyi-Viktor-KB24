@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1746380798 source:g:\Університети\Завдання 1 курс - 2 семестр\kolesnyk-viktor-kb24\lab11\prj\module_searchdel_kolesnyk\main.cpp
+	<iostream>
+	<cctype>
+	"Module_SearchDel_Kolesnyk.h"
+
+1746380789 g:\Університети\Завдання 1 курс - 2 семестр\kolesnyk-viktor-kb24\lab11\prj\module_searchdel_kolesnyk\module_searchdel_kolesnyk.h
+	<string>
+	"struct_type_project_2.h"
+
+1746380919 g:\Університети\Завдання 1 курс - 2 семестр\kolesnyk-viktor-kb24\lab11\prj\struct_type_project_2.h
+	<string>
+
