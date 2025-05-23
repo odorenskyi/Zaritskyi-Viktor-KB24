@@ -1,6 +1,10 @@
 #ifndef MODULESZARITSKYI_H_INCLUDED
 #define MODULESZARITSKYI_H_INCLUDED
 
+#include <string>
+#include <cmath>
+#include <stdexcept>
+
 struct Temperature {
     double celsius;
     double fahrenheit;
@@ -14,13 +18,6 @@ int countBits(int N);
 void processTask10_1(const std::string &inputFileName, const std::string &outputFileName);
 void processTask10_2(const std::string &inputFileName);
 void processTask10_3(const std::string &outputFileName, double x, double y, double z, int b);
-
-#ifndef MODULES_ZARITSKY_H
-#define MODULES_ZARITSKY_H
-
-#include <string>
-#include <cmath>
-#include <stdexcept>
 
 // Клас, що представляє абстракцію кавуна кубічної форми
 class ClassLab12_Zaritsky {
@@ -69,10 +66,16 @@ inline ClassLab12_Zaritsky::ClassLab12_Zaritsky()
 }
 
 inline ClassLab12_Zaritsky::ClassLab12_Zaritsky(double edge, std::string skin, std::string flesh, double ripe) {
-    setEdgeLength(edge);
-    setSkinColor(skin);
-    setFleshColor(flesh);
-    setRipeness(ripe);
+    if (edge <= 0) {
+        throw std::invalid_argument("Довжина грані має бути додатним числом");
+    }
+    if (ripe < 0 || ripe > 100) {
+        throw std::invalid_argument("Стиглість має бути в діапазоні від 0 до 100");
+    }
+    edgeLength = edge;
+    skinColor = skin;
+    fleshColor = flesh;
+    ripeness = ripe;
 }
 
 inline double ClassLab12_Zaritsky::getEdgeLength() const {

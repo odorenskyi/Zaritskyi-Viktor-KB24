@@ -1,0 +1,274 @@
+Test Case ID: TC_CONSTRUCTOR_DEFAULT_001
+Action: Створення об'єкта за замовчуванням та перевірка ініціалізації edgeLength
+Expected Result: edgeLength = 0.2
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_DEFAULT_002
+Action: Створення об'єкта за замовчуванням та перевірка ініціалізації skinColor
+Expected Result: skinColor = "green"
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_DEFAULT_003
+Action: Створення об'єкта за замовчуванням та перевірка ініціалізації fleshColor
+Expected Result: fleshColor = "red"
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_DEFAULT_004
+Action: Створення об'єкта за замовчуванням та перевірка ініціалізації ripeness
+Expected Result: ripeness = 90.0
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_PARAMS_001
+Action: Створення об'єкта з параметрами (0.5, "dark green", "pink", 85.5) та перевірка всіх атрибутів
+Expected Result: edgeLength=0.5, skinColor="dark green", fleshColor="pink", ripeness=85.5
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_PARAMS_002
+Action: Створення об'єкта з мінімальними валідними параметрами (0.01, "", "", 0.0)
+Expected Result: edgeLength=0.01, skinColor="", fleshColor="", ripeness=0.0
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_PARAMS_003
+Action: Створення об'єкта з максимальними валідними параметрами (10.0, "very long color name", "another long color", 100.0)
+Expected Result: edgeLength=10.0, skinColor="very long color name", fleshColor="another long color", ripeness=100.0
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_PARAMS_004
+Action: Спроба створення об'єкта з негативною довжиною грані (-1.0, "green", "red", 50.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Довжина грані має бути додатним числом"
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_PARAMS_005
+Action: Спроба створення об'єкта з нульовою довжиною грані (0.0, "green", "red", 50.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Довжина грані має бути додатним числом"
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_PARAMS_006
+Action: Спроба створення об'єкта з негативною стиглістю (1.0, "green", "red", -10.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Стиглість має бути в діапазоні від 0 до 100"
+Test Result: PASS
+
+Test Case ID: TC_CONSTRUCTOR_PARAMS_007
+Action: Спроба створення об'єкта зі стиглістю більше 100 (1.0, "green", "red", 150.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Стиглість має бути в діапазоні від 0 до 100"
+Test Result: PASS
+
+Test Case ID: TC_GET_EDGE_001
+Action: Створення об'єкта за замовчуванням та виклик getEdgeLength()
+Expected Result: Повернення значення 0.2
+Test Result: PASS
+
+Test Case ID: TC_GET_EDGE_002
+Action: Створення об'єкта з edgeLength=1.5 та виклик getEdgeLength()
+Expected Result: Повернення значення 1.5
+Test Result: PASS
+
+Test Case ID: TC_GET_EDGE_003
+Action: Створення об'єкта з дуже малим значенням edgeLength=0.001 та виклик getEdgeLength()
+Expected Result: Повернення значення 0.001
+Test Result: PASS
+
+Test Case ID: TC_GET_SKIN_001
+Action: Створення об'єкта за замовчуванням та виклик getSkinColor()
+Expected Result: Повернення рядка "green"
+Test Result: PASS
+
+Test Case ID: TC_GET_SKIN_002
+Action: Створення об'єкта з skinColor="yellow" та виклик getSkinColor()
+Expected Result: Повернення рядка "yellow"
+Test Result: PASS
+
+Test Case ID: TC_GET_SKIN_003
+Action: Створення об'єкта з пустим skinColor="" та виклик getSkinColor()
+Expected Result: Повернення порожнього рядка ""
+Test Result: PASS
+
+Test Case ID: TC_GET_FLESH_001
+Action: Створення об'єкта за замовчуванням та виклик getFleshColor()
+Expected Result: Повернення рядка "red"
+Test Result: PASS
+
+Test Case ID: TC_GET_FLESH_002
+Action: Створення об'єкта з fleshColor="white" та виклик getFleshColor()
+Expected Result: Повернення рядка "white"
+Test Result: PASS
+
+Test Case ID: TC_GET_FLESH_003
+Action: Створення об'єкта з довгим fleshColor="very bright crimson red" та виклик getFleshColor()
+Expected Result: Повернення рядка "very bright crimson red"
+Test Result: PASS
+
+Test Case ID: TC_GET_RIPENESS_001
+Action: Створення об'єкта за замовчуванням та виклик getRipeness()
+Expected Result: Повернення значення 90.0
+Test Result: PASS
+
+Test Case ID: TC_GET_RIPENESS_002
+Action: Створення об'єкта з ripeness=0.0 та виклик getRipeness()
+Expected Result: Повернення значення 0.0
+Test Result: PASS
+
+Test Case ID: TC_GET_RIPENESS_003
+Action: Створення об'єкта з ripeness=100.0 та виклик getRipeness()
+Expected Result: Повернення значення 100.0
+Test Result: PASS
+
+Test Case ID: TC_GET_RIPENESS_004
+Action: Створення об'єкта з ripeness=55.75 та виклик getRipeness()
+Expected Result: Повернення значення 55.75
+Test Result: PASS
+
+Test Case ID: TC_GET_VOLUME_001
+Action: Створення об'єкта з edgeLength=1.0 та виклик getVolume()
+Expected Result: Повернення значення 1.0 (1? = 1)
+Test Result: PASS
+
+Test Case ID: TC_GET_VOLUME_002
+Action: Створення об'єкта з edgeLength=2.0 та виклик getVolume()
+Expected Result: Повернення значення 8.0 (2? = 8)
+Test Result: PASS
+
+Test Case ID: TC_GET_VOLUME_003
+Action: Створення об'єкта з edgeLength=0.5 та виклик getVolume()
+Expected Result: Повернення значення 0.125 (0.5? = 0.125)
+Test Result: PASS
+
+Test Case ID: TC_GET_VOLUME_004
+Action: Створення об'єкта за замовчуванням (edgeLength=0.2) та виклик getVolume()
+Expected Result: Повернення значення 0.008 (0.2? = 0.008)
+Test Result: PASS
+
+Test Case ID: TC_GET_VOLUME_005
+Action: Створення об'єкта з edgeLength=3.0 та виклик getVolume()
+Expected Result: Повернення значення 27.0 (3? = 27)
+Test Result: PASS
+
+Test Case ID: TC_GET_VOLUME_006
+Action: Створення об'єкта з edgeLength=0.1 та виклик getVolume()
+Expected Result: Повернення значення 0.001 (0.1? = 0.001)
+Test Result: PASS
+
+Test Case ID: TC_SET_EDGE_001
+Action: Створення об'єкта та виклик setEdgeLength(1.5)
+Expected Result: getEdgeLength() повертає 1.5
+Test Result: PASS
+
+Test Case ID: TC_SET_EDGE_002
+Action: Створення об'єкта та виклик setEdgeLength(0.01)
+Expected Result: getEdgeLength() повертає 0.01
+Test Result: PASS
+
+Test Case ID: TC_SET_EDGE_003
+Action: Створення об'єкта та виклик setEdgeLength(10.0)
+Expected Result: getEdgeLength() повертає 10.0
+Test Result: PASS
+
+Test Case ID: TC_SET_EDGE_FAIL_001
+Action: Створення об'єкта та виклик setEdgeLength(-1.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Довжина грані має бути додатним числом"
+Test Result: PASS
+
+Test Case ID: TC_SET_EDGE_FAIL_002
+Action: Створення об'єкта та виклик setEdgeLength(0.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Довжина грані має бути додатним числом"
+Test Result: PASS
+
+Test Case ID: TC_SET_EDGE_FAIL_003
+Action: Створення об'єкта та виклик setEdgeLength(-100.5)
+Expected Result: Виняток std::invalid_argument з повідомленням "Довжина грані має бути додатним числом"
+Test Result: PASS
+
+Test Case ID: TC_SET_SKIN_001
+Action: Створення об'єкта та виклик setSkinColor("yellow")
+Expected Result: getSkinColor() повертає "yellow"
+Test Result: PASS
+
+Test Case ID: TC_SET_SKIN_002
+Action: Створення об'єкта та виклик setSkinColor("")
+Expected Result: getSkinColor() повертає ""
+Test Result: PASS
+
+Test Case ID: TC_SET_SKIN_003
+Action: Створення об'єкта та виклик setSkinColor("striped green and yellow")
+Expected Result: getSkinColor() повертає "striped green and yellow"
+Test Result: PASS
+
+Test Case ID: TC_SET_SKIN_004
+Action: Створення об'єкта та послідовні виклики setSkinColor("green"), setSkinColor("yellow")
+Expected Result: getSkinColor() повертає "yellow"
+Test Result: PASS
+
+Test Case ID: TC_SET_FLESH_001
+Action: Створення об'єкта та виклик setFleshColor("white")
+Expected Result: getFleshColor() повертає "white"
+Test Result: PASS
+
+Test Case ID: TC_SET_FLESH_002
+Action: Створення об'єкта та виклик setFleshColor("pink")
+Expected Result: getFleshColor() повертає "pink"
+Test Result: PASS
+
+Test Case ID: TC_SET_FLESH_003
+Action: Створення об'єкта та виклик setFleshColor("")
+Expected Result: getFleshColor() повертає ""
+Test Result: PASS
+
+Test Case ID: TC_SET_FLESH_004
+Action: Створення об'єкта та виклик setFleshColor("deep crimson red with black seeds")
+Expected Result: getFleshColor() повертає "deep crimson red with black seeds"
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_001
+Action: Створення об'єкта та виклик setRipeness(50.0)
+Expected Result: getRipeness() повертає 50.0
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_002
+Action: Створення об'єкта та виклик setRipeness(0.0)
+Expected Result: getRipeness() повертає 0.0
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_003
+Action: Створення об'єкта та виклик setRipeness(100.0)
+Expected Result: getRipeness() повертає 100.0
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_004
+Action: Створення об'єкта та виклик setRipeness(75.25)
+Expected Result: getRipeness() повертає 75.25
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_FAIL_001
+Action: Створення об'єкта та виклик setRipeness(-1.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Стиглість має бути в діапазоні від 0 до 100"
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_FAIL_002
+Action: Створення об'єкта та виклик setRipeness(101.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Стиглість має бути в діапазоні від 0 до 100"
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_FAIL_003
+Action: Створення об'єкта та виклик setRipeness(-50.5)
+Expected Result: Виняток std::invalid_argument з повідомленням "Стиглість має бути в діапазоні від 0 до 100"
+Test Result: PASS
+
+Test Case ID: TC_SET_RIPENESS_FAIL_004
+Action: Створення об'єкта та виклик setRipeness(200.0)
+Expected Result: Виняток std::invalid_argument з повідомленням "Стиглість має бути в діапазоні від 0 до 100"
+Test Result: PASS
+
+Test Case ID: TC_INTEGRATION_001
+Action: Створення об'єкта, встановлення всіх атрибутів через сеттери, перевірка через геттери
+Expected Result: Всі значення встановлені коректно
+Test Result: PASS
+
+Test Case ID: TC_INTEGRATION_002
+Action: Створення об'єкта, зміна edgeLength та перевірка зміни getVolume()
+Expected Result: Об'єм змінюється відповідно до нового значення довжини грані
+Test Result: PASS
+
+Test Case ID: TC_INTEGRATION_003
+Action: Послідовна зміна одного атрибута кілька разів та перевірка збереження останнього значення
+Expected Result: Зберігається тільки останнє встановлене значення
+Test Result: PASS

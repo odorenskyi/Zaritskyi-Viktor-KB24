@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1747997129 source:c:\users\administrator\mikroffarad\development\zaritskyi-viktor-kb24\lab12\prj\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<cstdlib>
+	<filesystem>
+	<sstream>
+	<cmath>
+	<thread>
+	<chrono>
+	<windows.h>
+	"ModulesZaritskyi.h"
+
+1748001251 c:\users\administrator\mikroffarad\development\zaritskyi-viktor-kb24\lab08\prj\moduleszaritskyi.h
+	<string>
+	<cmath>
+	<stdexcept>
+
